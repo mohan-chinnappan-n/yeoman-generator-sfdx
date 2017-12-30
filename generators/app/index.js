@@ -153,6 +153,7 @@ module.exports = class extends Generator {
 
   writing() {
 
+  /*
     githubUsername(this.options.githubUserEmail).then(username => {
     	this.options.githubUsername = username;
       this.fs.copyTpl(
@@ -160,7 +161,8 @@ module.exports = class extends Generator {
         this.destinationPath(this.options.prjName + '/index.html'),
         { title: 'Templating with Yeoman: ' + this.options.githubUsername }
       );
-
+    });
+  */
 
       // config files
 
@@ -186,7 +188,7 @@ module.exports = class extends Generator {
       );
 
 
-    });
+
 
 
 
@@ -261,7 +263,8 @@ module.exports = class extends Generator {
     this.log(( chalk.green("Creating Lightning Application...") ) );
 
 
-    this.fs.copyTpl(
+
+  /*   this.fs.copyTpl(
         this.templatePath('aura/readme.md'),
         this.destinationPath(this.options.prjName + '/force-app/main/default/aura/' + 'readme.md'),
         { lxApp:   this.options.lxApp,
@@ -269,6 +272,7 @@ module.exports = class extends Generator {
 
         }
     );
+    */
 
     shell.rm('-f', this.options.prjName + '/force-app/main/default/aura/' + 'readme.md');
     shell.cd(this.destinationRoot() + "/" + this.options.prjName + "/force-app/main/default/aura");

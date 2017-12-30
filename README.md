@@ -1,6 +1,10 @@
 ## Yeoman generator for SFDX
 
 ### Usage Demo
+
+```
+$ yo sfdx
+```
 ![yeoman sfdx gen](img/sfdx-yo-4.gif)
 
 
