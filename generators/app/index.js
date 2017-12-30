@@ -16,7 +16,7 @@ module.exports = class extends Generator {
   initializing() {
 
     this.log(yosay(
-         chalk.red("Welcome to SFDX Project Generator!")
+         chalk.red("Welcome to SFDX Project Generator!!")
         )
      );
 
@@ -111,6 +111,15 @@ module.exports = class extends Generator {
 
         this.log('prjName: ', answers.prjName);
         this.options.prjName = answers.prjName;
+
+        this.log(( chalk.green("Creating folders...") ) );
+
+
+        shell.mkdir('-p', this.destinationRoot() + "/" + this.options.prjName + "/config");
+        shell.mkdir('-p', this.destinationRoot() + "/" + this.options.prjName + "/force-app/main/default/classes");
+        shell.mkdir('-p', this.destinationRoot() + "/" + this.options.prjName + "/force-app/main/default/tests");
+        shell.mkdir('-p', this.destinationRoot() + "/" + this.options.prjName + "/force-app/main/default/aura");
+        this.log(( chalk.green("Creating folders... completed.") ) );
 
         this.log('githubUserEmail: ', answers.githubUserEmail);
         this.options.githubUserEmail = answers.githubUserEmail;
@@ -264,7 +273,7 @@ module.exports = class extends Generator {
 
 
 
-  /*   this.fs.copyTpl(
+     this.fs.copyTpl(
         this.templatePath('aura/readme.md'),
         this.destinationPath(this.options.prjName + '/force-app/main/default/aura/' + 'readme.md'),
         { lxApp:   this.options.lxApp,
@@ -272,9 +281,9 @@ module.exports = class extends Generator {
 
         }
     );
-    */
 
-    shell.rm('-f', this.options.prjName + '/force-app/main/default/aura/' + 'readme.md');
+
+    //shell.rm('-f', this.options.prjName + '/force-app/main/default/aura/' + 'readme.md');
     shell.cd(this.destinationRoot() + "/" + this.options.prjName + "/force-app/main/default/aura");
     shell.ls()
     // Run sfdx cli synchronously

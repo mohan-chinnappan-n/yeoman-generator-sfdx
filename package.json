@@ -1,18 +1,16 @@
 {
   "name": "generator-sfdx",
-  "version": "0.1.2",
+  "version": "0.1.9",
   "description": "Generator for SFDX",
   "author": "mohan chinnappan",
+  "license": "ISC",
   "files": [
     "generators"
   ],
-
- "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/mohan-chinnappan-n/yeoman-generator-sfdx"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohan-chinnappan-n/yeoman-generator-sfdx"
   },
-
-
   "keywords": [
     "yeoman-generator"
   ],
