@@ -1,6 +1,6 @@
 ## Yeoman generator for SFDX
 
-![yeoman sfx gen](./yeoman-sfdx-gen.png)
+![yeoman sfdx gen](./img/yeoman-sfdx-gen.png)
 
 ### Usage
 ```
@@ -94,3 +94,23 @@ MyProject/
 9 directories, 15 files
 
 ```
+
+## Edit with VS
+
+
+```
+$ cd MyProject
+
+$ code .
+
+
+
+```
+
+
+
+![sfdx-gen-edit-1](./img/sfdx-gen-edit-1.png)
+
+![sfdx-gen-edit-2](./img/sfdx-gen-edit-2.png)
+
+![sfdx-gen-edit-pmd](./img/sfdx-gen-edit-pmd.png)
