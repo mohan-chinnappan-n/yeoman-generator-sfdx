@@ -1,0 +1,13 @@
+{
+  "country": "US",
+  "edition": "Developer",
+
+  "orgName": "MyScratchOrg 1",
+  "edition": "Developer",
+
+  "adminEmail": "mohan.chinnappan.n@gmail.com",
+
+  "orgPreferences": {
+    "enabled": ["S1DesktopEnabled"]
+  }
+}

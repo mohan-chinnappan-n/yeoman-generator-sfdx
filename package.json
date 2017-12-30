@@ -1,0 +1,21 @@
+{
+  "name": "generator-sfdx",
+  "version": "0.1.0",
+  "description": "Generator for SFDX",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "github-username": "^4.1.0",
+    "shelljs": "^0.7.8",
+    "yeoman-generator": "^1.1.1",
+    "yosay": "^2.0.1"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.4"
+  }
+}

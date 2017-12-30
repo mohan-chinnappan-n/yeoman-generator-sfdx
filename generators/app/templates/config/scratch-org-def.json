@@ -1,0 +1,13 @@
+{
+  "country": "US",
+  "edition": "Developer",
+
+  "orgName": "<%= orgName %>",
+  "edition": "Developer",
+
+  "adminEmail": "<%=githubUserEmail %>",
+
+  "orgPreferences": {
+    "enabled": ["S1DesktopEnabled"]
+  }
+}

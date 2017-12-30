@@ -1,0 +1,317 @@
+[
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 136,
+            "modifiedTime": 1514602551000,
+            "changeTime": 1514602551000,
+            "contentHash": "afa93b7c40deab8cdbd247350ad17a9bc39369cd",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1514602551000,
+            "changeTime": 1514602551000,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 136,
+            "modifiedTime": 1514602551000,
+            "changeTime": 1514602551000,
+            "contentHash": "0803afd433bedf4fb3c621888196f3a590a9c016",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/classes",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/classes",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 204,
+            "modifiedTime": 1514606976000,
+            "changeTime": 1514606976000,
+            "contentHash": "edcc0b96b795e804fc0d1ee799f36d0a13cbe354",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/classes/ContactController.cls",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/classes/ContactController.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 952,
+            "modifiedTime": 1514608091000,
+            "changeTime": 1514608091000,
+            "contentHash": "602b5f445268df7d8b09109d9b5447333d54c64b",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/classes/ContactController.cls-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/classes/ContactController.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 174,
+            "modifiedTime": 1514608091000,
+            "changeTime": 1514608091000,
+            "contentHash": "ec29c6f2ff617299f8e53d0ea63d440cd27207eb",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/classes/DemoController.cls",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/classes/DemoController.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 934,
+            "modifiedTime": 1514606893000,
+            "changeTime": 1514606893000,
+            "contentHash": "3de6d1b11ba26b850acab09e880a47b37c39c567",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/classes/DemoController.cls-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/classes/DemoController.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 173,
+            "modifiedTime": 1514602551000,
+            "changeTime": 1514602551000,
+            "contentHash": "347d448172840cfbabc1b5d2ee5d3d1d84f0f15a",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/pages",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/pages",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 204,
+            "modifiedTime": 1514607371000,
+            "changeTime": 1514607371000,
+            "contentHash": "0b3a06d4a99ffbb3ba775fc067ebe105412ef916",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/pages/ContactPage.page",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/pages/ContactPage.page",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 1546,
+            "modifiedTime": 1514608091000,
+            "changeTime": 1514608091000,
+            "contentHash": "29b541003bfefb6af0fb861e603ad9856e61b0ff",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/pages/ContactPage.page-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/pages/ContactPage.page-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 277,
+            "modifiedTime": 1514608091000,
+            "changeTime": 1514608091000,
+            "contentHash": "55ec87f5499575b9d945ec81df015fa6c5911056",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/pages/DemoPage.page",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/pages/DemoPage.page",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 1543,
+            "modifiedTime": 1514607051000,
+            "changeTime": 1514607051000,
+            "contentHash": "d56cc77570ddc24f356d35ab346feeace058e68d",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/pages/DemoPage.page-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/main/default/pages/DemoPage.page-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 277,
+            "modifiedTime": 1514607418000,
+            "changeTime": 1514607418000,
+            "contentHash": "263a8480b91ee152b327a57540c5b34b88545a29",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1514602551000,
+            "changeTime": 1514602551000,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1514602551000,
+            "changeTime": 1514602551000,
+            "contentHash": "1adaa84dc07a16d34ede5b9a70713ff832a0f853",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default/classes",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default/classes",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 204,
+            "modifiedTime": 1514607985000,
+            "changeTime": 1514607985000,
+            "contentHash": "c695af6032d79613d499903b0741c3271539498a",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default/classes/ContactControllerTests.cls",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default/classes/ContactControllerTests.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 689,
+            "modifiedTime": 1514608097000,
+            "changeTime": 1514608097000,
+            "contentHash": "ea3c46a2db3e754bb94ceefed9ac31e810e39010",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default/classes/ContactControllerTests.cls-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default/classes/ContactControllerTests.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 174,
+            "modifiedTime": 1514608097000,
+            "changeTime": 1514608097000,
+            "contentHash": "ec29c6f2ff617299f8e53d0ea63d440cd27207eb",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default/classes/DemoControllerTests.cls",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default/classes/DemoControllerTests.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 634,
+            "modifiedTime": 1514602551000,
+            "changeTime": 1514602551000,
+            "contentHash": "5aebdcde1dad56bd4f7fa41fbbb1a0187cafd6fe",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default/classes/DemoControllerTests.cls-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject/force-app/test/default/classes/DemoControllerTests.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 174,
+            "modifiedTime": 1514602551000,
+            "changeTime": 1514602551000,
+            "contentHash": "ec29c6f2ff617299f8e53d0ea63d440cd27207eb",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdc/sfdx/generator/generator-sfdx/MyProject",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 238,
+            "modifiedTime": 1514602551000,
+            "changeTime": 1514602551000,
+            "contentHash": "7c5432164c7ee5ba8996c99591813a179de0512e",
+            "isWorkspace": true,
+            "isArtifactRoot": false
+        }
+    ]
+]
