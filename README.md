@@ -111,6 +111,11 @@ $ code .
 
 ![sfdx-gen-edit-1](./img/sfdx-gen-edit-1.png)
 
+
+### Apex code completion
+
 ![sfdx-gen-edit-2](./img/sfdx-gen-edit-2.png)
 
+
+### Apex PMD code-scan extension for VS Code
 ![sfdx-gen-edit-pmd](./img/sfdx-gen-edit-pmd.png)
