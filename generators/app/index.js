@@ -1,5 +1,5 @@
 var Generator = require('yeoman-generator');
-var shelljs = require('shelljs');
+var shell = require('shelljs');
 const githubUsername = require('github-username');
 
 var chalk = require('chalk');
@@ -27,7 +27,7 @@ module.exports = class extends Generator {
     // or by joining a path using generator.destinationPath('sub/path').
     // ref:http://yeoman.io/authoring/file-system.html
 
-
+    /*
     console.log("destinationRoot :" + this.destinationRoot())
     console.log(this.destinationPath('package.json'));
     console.log(this.contextRoot)
@@ -35,6 +35,7 @@ module.exports = class extends Generator {
     console.log("template context: " + this.sourceRoot());
     console.log("template file: " +  this.templatePath('index.html'))
     console.log("destinationPath:" + this.destinationPath('public'));
+     */
 
     //this.composeWith(require.resolve('../classic'));
     //this.composeWith(require.resolve('../lightning'));
@@ -86,7 +87,24 @@ module.exports = class extends Generator {
          name    : 'vfPageName', // binding variable
          message : 'Visualforce Page Name',
          default : "ContactPage"
-       }
+       },
+
+       {
+          type    : 'input',
+          name    : 'lxApp', // binding variable
+          message : 'Lightning App Name',
+          default : "ContactApp"
+        }
+
+        /*
+        ,{
+           type    : 'input',
+           name    : 'lxCmp', // binding variable
+           message : 'Lightning Component Name',
+           default : "ContactComp"
+         }
+        */
+
 
     ]).then((answers) => {
         this.log("=========================");
@@ -110,6 +128,13 @@ module.exports = class extends Generator {
         this.log('vfPageName: ', answers.vfPageName);
         this.options.vfPageName = answers.vfPageName;
 
+        this.log('lxApp: ', answers.lxApp);
+        this.options.lxApp = answers.lxApp;
+
+
+        //this.log('lxCmp: ', answers.lxCmp);
+        //this.options.lxCmp = answers.lxCmp;
+
         this.log("=========================");
       });
   }
@@ -123,7 +148,7 @@ module.exports = class extends Generator {
 
   installingLodash() {
     //  this.yarnInstall(['lodash'], { 'dev': true });
-    this.npmInstall(['lodash'], { 'save-dev': true });
+    // this.npmInstall(['lodash'], { 'save-dev': true });
   }
 
   writing() {
@@ -139,6 +164,9 @@ module.exports = class extends Generator {
 
       // config files
 
+      this.log(( chalk.green("Creating config for project...") ) );
+
+
       this.fs.copyTpl(
         this.templatePath('config/sfdx-project.json'),
         this.destinationPath(this.options.prjName + '/sfdx-project.json'),
@@ -146,6 +174,8 @@ module.exports = class extends Generator {
           apiVersion:   this.options.apiVersion
         }
       );
+
+        this.log(( chalk.green("Creating config for scratch org...") ) );
 
       this.fs.copyTpl(
         this.templatePath('config/scratch-org-def.json'),
@@ -164,6 +194,9 @@ module.exports = class extends Generator {
 
 
     // apex
+
+    this.log(( chalk.green("Creating Apex classes...") ) );
+
     this.fs.copyTpl(
         this.templatePath('apex/DemoController.cls'),
         this.destinationPath(this.options.prjName + '/force-app/main/default/classes/' + this.options.apexCtrlName + ".cls"),
@@ -180,6 +213,7 @@ module.exports = class extends Generator {
     );
 
     // vf pages
+   this.log(( chalk.green("Creating Visualforce pages...") ) );
 
     this.fs.copyTpl(
         this.templatePath('pages/demoPage.page'),
@@ -202,6 +236,8 @@ module.exports = class extends Generator {
 
     // test files
 
+    this.log(( chalk.green("Creating Apex Test Classes...") ) );
+
     // apexTests
     this.fs.copyTpl(
         this.templatePath('apexTests/DemoControllerTests.cls'),
@@ -220,16 +256,54 @@ module.exports = class extends Generator {
         }
     );
 
+    // lightning
+
+    this.log(( chalk.green("Creating Lightning Application...") ) );
+
+
+    this.fs.copyTpl(
+        this.templatePath('aura/readme.md'),
+        this.destinationPath(this.options.prjName + '/force-app/main/default/aura/' + 'readme.md'),
+        { lxApp:   this.options.lxApp,
+          lxCmp: this.options.lxCmp
+
+        }
+    );
+
+    shell.rm('-f', this.options.prjName + '/force-app/main/default/aura/' + 'readme.md');
+    shell.cd(this.destinationRoot() + "/" + this.options.prjName + "/force-app/main/default/aura");
+    shell.ls()
+    // Run sfdx cli synchronously
+    if (shell.exec('sfdx force:lightning:app:create -n ContactApp').code !== 0) {
+      shell.echo('Error: sfdx force:lightning:app:create  failed');
+      shell.exit(1);
+    }
+
+    this.log(( chalk.green("Pushing code to the scratch org...") ) );
 
 
 
+    shell.cd(this.destinationRoot() + "/" + this.options.prjName);
+    if (shell.exec('sfdx force:source:push').code !== 0) {
+      shell.echo('Error: sfdx force:source:push failed');
+      shell.exit(1);
+    } else {
+
+      this.log( chalk.green("Starting SFDX: Open Default Scratch Org...")  );
 
 
+
+      if (shell.exec('sfdx force:org:open -p c/' + this.options.lxApp + '.app').code !== 0) {
+        shell.echo('Error: sfdx force:org:open failed');
+        shell.exit(1);
+      }
+    }
 
   }
 
   end() {
-    console.log('Your project is ready!');
+    this.log(yosay( chalk.green("Your project is ready! run: code . to launch VS Code") ) );
+
   }
 
 
