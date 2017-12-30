@@ -2,6 +2,10 @@ var Generator = require('yeoman-generator');
 var shelljs = require('shelljs');
 const githubUsername = require('github-username');
 
+var chalk = require('chalk');
+var yosay = require('yosay');
+
+
 
 module.exports = class extends Generator {
 
@@ -10,6 +14,11 @@ module.exports = class extends Generator {
   //
 
   initializing() {
+
+    this.log(yosay(
+         chalk.red("Welcome to SFDX Project Generator!")
+        )
+     );
 
 
     //this.argument('apiVersion', { type: String, required: true });
@@ -220,8 +229,7 @@ module.exports = class extends Generator {
   }
 
   end() {
-
-    console.log('goodbye');
+    console.log('Your project is ready!');
   }
 
 
