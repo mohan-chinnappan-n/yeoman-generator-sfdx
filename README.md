@@ -64,7 +64,7 @@ Your project is ready!
 ## Project folder structure
 
 ```
-tree MyProject/
+$ tree MyProject/
 MyProject/
 ├── config
 │   └── scratch-org-def.json
