@@ -6,7 +6,7 @@
 
 
 
-### install
+### Install
 
 ```
 # create a nodejs project
@@ -35,27 +35,31 @@ MyProject/
 ├── force-app
 │   ├── main
 │   │   └── default
+│   │       ├── aura
+│   │       │   └── ContactApp
+│   │       │       ├── ContactApp.app
+│   │       │       ├── ContactApp.app-meta.xml
+│   │       │       ├── ContactApp.auradoc
+│   │       │       ├── ContactApp.css
+│   │       │       ├── ContactApp.svg
+│   │       │       ├── ContactAppController.js
+│   │       │       ├── ContactAppHelper.js
+│   │       │       └── ContactAppRenderer.js
 │   │       ├── classes
 │   │       │   ├── ContactController.cls
-│   │       │   ├── ContactController.cls-meta.xml
-│   │       │   ├── DemoController.cls
-│   │       │   └── DemoController.cls-meta.xml
-│   │       └── pages
-│   │           ├── ContactPage.page
-│   │           ├── ContactPage.page-meta.xml
-│   │           ├── DemoPage.page
-│   │           └── DemoPage.page-meta.xml
+│   │       │   └── ContactController.cls-meta.xml
+│   │       ├── pages
+│   │       │   ├── ContactPage.page
+│   │       │   └── ContactPage.page-meta.xml
+│   │       └── tests
 │   └── test
 │       └── default
 │           └── classes
 │               ├── ContactControllerTests.cls
-│               ├── ContactControllerTests.cls-meta.xml
-│               ├── DemoControllerTests.cls
-│               └── DemoControllerTests.cls-meta.xml
-├── index.html
+│               └── ContactControllerTests.cls-meta.xml
 └── sfdx-project.json
 
-9 directories, 15 files
+12 directories, 16 files
 
 ```
 

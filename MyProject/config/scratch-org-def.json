@@ -1,0 +1,13 @@
+{
+  "country": "US",
+  "edition": "Developer",
+
+  "orgName": "MyScratchOrg 1",
+  "edition": "Developer",
+
+  "adminEmail": "",
+
+  "orgPreferences": {
+    "enabled": ["S1DesktopEnabled"]
+  }
+}
