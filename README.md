@@ -1,5 +1,22 @@
 ## Yeoman generator for SFDX
 
+## NPM repo location:
+
+[npm repo](https://www.npmjs.com/package/generator-sfdx)
+
+
+
+### install
+
+```
+# create a nodejs project
+$ npm init
+# install Yeoman generator for SFDX
+$ npm install generator-sfdx
+
+```
+
+
 ### Usage Demo
 
 ```
