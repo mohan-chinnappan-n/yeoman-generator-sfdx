@@ -25,7 +25,7 @@ $ yo sfdx
 ![yeoman sfdx gen](img/sfdx-yo-4.gif)
 
 
-## Project folder structure
+## Generated Project folder structure
 
 ```
 $ tree MyProject/
@@ -63,7 +63,7 @@ MyProject/
 
 ```
 
-## Edit with VS
+## Edit with VS Code
 
 
 ```
