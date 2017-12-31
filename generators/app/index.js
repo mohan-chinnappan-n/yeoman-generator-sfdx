@@ -16,7 +16,7 @@ module.exports = class extends Generator {
   initializing() {
 
     this.log(yosay(
-         chalk.red("Welcome to SFDX Project Generator!!")
+         chalk.red("Welcome to SFDX Project Generator!")
         )
      );
 
@@ -112,6 +112,10 @@ module.exports = class extends Generator {
         this.log('prjName: ', answers.prjName);
         this.options.prjName = answers.prjName;
 
+        this.log('apiVersion: ', answers.apiVersion);
+        this.options.apiVersion = answers.apiVersion;
+
+
         this.log(( chalk.green("Creating folders...") ) );
 
 
@@ -121,6 +125,35 @@ module.exports = class extends Generator {
         shell.mkdir('-p', this.destinationRoot() + "/" + this.options.prjName + "/force-app/main/default/aura");
         this.log(( chalk.green("Creating folders... completed.") ) );
 
+
+        // config files
+
+        this.log(( chalk.green("Creating config for project...") ) );
+
+
+        this.fs.copyTpl(
+          this.templatePath('config/sfdx-project.json'),
+          this.destinationPath(this.options.prjName + '/sfdx-project.json'),
+          { appPath: 'force-app',
+            apiVersion:   this.options.apiVersion
+          }
+        );
+
+        this.log(( chalk.green("Creating config for scratch org...") ) );
+
+        this.fs.copyTpl(
+          this.templatePath('config/scratch-org-def.json'),
+          this.destinationPath(this.options.prjName + '/config/scratch-org-def.json'),
+          { orgName: this.options.scratchOrgName,
+            githubUserEmail: this.options.githubUserEmail
+          }
+        );
+
+        this.log(( chalk.green("Creating config for project...completed.") ) );
+
+
+
+
         this.log('githubUserEmail: ', answers.githubUserEmail);
         this.options.githubUserEmail = answers.githubUserEmail;
 
@@ -128,8 +161,6 @@ module.exports = class extends Generator {
         this.log('scratchOrgName: ', answers.scratchOrgName);
         this.options.scratchOrgName = answers.scratchOrgName;
 
-        this.log('apiVersion: ', answers.apiVersion);
-        this.options.apiVersion = answers.apiVersion;
 
         this.log('apexCtrlName: ', answers.apexCtrlName);
         this.options.apexCtrlName = answers.apexCtrlName;
@@ -155,12 +186,12 @@ module.exports = class extends Generator {
   // ref: http://yeoman.io/authoring/dependencies.html
 
 
-  installingLodash() {
+  //installingLodash() {
     //  this.yarnInstall(['lodash'], { 'dev': true });
     // this.npmInstall(['lodash'], { 'save-dev': true });
-  }
+  //}
 
-  writing() {
+  configuring() {
 
   /*
     githubUsername(this.options.githubUserEmail).then(username => {
@@ -172,29 +203,6 @@ module.exports = class extends Generator {
       );
     });
   */
-
-      // config files
-
-      this.log(( chalk.green("Creating config for project...") ) );
-
-
-      this.fs.copyTpl(
-        this.templatePath('config/sfdx-project.json'),
-        this.destinationPath(this.options.prjName + '/sfdx-project.json'),
-        { appPath: 'force-app',
-          apiVersion:   this.options.apiVersion
-        }
-      );
-
-        this.log(( chalk.green("Creating config for scratch org...") ) );
-
-      this.fs.copyTpl(
-        this.templatePath('config/scratch-org-def.json'),
-        this.destinationPath(this.options.prjName + '/config/scratch-org-def.json'),
-        { orgName: this.options.scratchOrgName,
-          githubUserEmail: this.options.githubUserEmail
-        }
-      );
 
 
 
@@ -273,7 +281,7 @@ module.exports = class extends Generator {
 
 
 
-     this.fs.copyTpl(
+     /*this.fs.copyTpl(
         this.templatePath('aura/readme.md'),
         this.destinationPath(this.options.prjName + '/force-app/main/default/aura/' + 'readme.md'),
         { lxApp:   this.options.lxApp,
@@ -281,6 +289,7 @@ module.exports = class extends Generator {
 
         }
     );
+    */
 
 
     //shell.rm('-f', this.options.prjName + '/force-app/main/default/aura/' + 'readme.md');
@@ -292,29 +301,30 @@ module.exports = class extends Generator {
       shell.exit(1);
     }
 
+
+
+  }
+
+
+
+  end() {
+
     this.log(( chalk.green("Pushing code to the scratch org...") ) );
 
-
-
     shell.cd(this.destinationRoot() + "/" + this.options.prjName);
+    shell.exec('sfdx force:config:set defaultusername=MyOrg3');
+
     if (shell.exec('sfdx force:source:push').code !== 0) {
       shell.echo('Error: sfdx force:source:push failed');
       shell.exit(1);
     } else {
-
       this.log( chalk.green("Starting SFDX: Open Default Scratch Org...")  );
-
-
-
       if (shell.exec('sfdx force:org:open -p c/' + this.options.lxApp + '.app').code !== 0) {
         shell.echo('Error: sfdx force:org:open failed');
         shell.exit(1);
       }
     }
 
-  }
-
-  end() {
     this.log(yosay( chalk.green("Your project is ready! run: code . to launch VS Code") ) );
 
   }
