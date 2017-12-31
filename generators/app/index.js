@@ -20,6 +20,14 @@ module.exports = class extends Generator {
         )
      );
 
+     this.log((
+          chalk.green("Here is Org list, note down the ALIAS for your scratch org you like to work with:")
+         )
+      );
+
+     shell.exec('sfdx force:org:list');
+
+
 
     //this.argument('apiVersion', { type: String, required: true });
 
@@ -69,6 +77,14 @@ module.exports = class extends Generator {
         },
 
         {
+          type    : 'input',
+          name    : 'scratchOrgAlias', // binding variable
+          message : 'Scratch Org Alias',
+          default : "MyOrg3"
+        },
+
+
+        {
         type    : 'input',
         name    : 'apiVersion', // binding variable
         message : 'API version',
@@ -115,6 +131,15 @@ module.exports = class extends Generator {
         this.log('apiVersion: ', answers.apiVersion);
         this.options.apiVersion = answers.apiVersion;
 
+        this.log('scratchOrgName: ', answers.scratchOrgName);
+        this.options.scratchOrgName = answers.scratchOrgName;
+
+
+        this.log('scratchOrgAlias: ', answers.scratchOrgAlias);
+        this.options.scratchOrgAlias = answers.scratchOrgAlias;
+
+
+
 
         this.log(( chalk.green("Creating folders...") ) );
 
@@ -157,9 +182,6 @@ module.exports = class extends Generator {
         this.log('githubUserEmail: ', answers.githubUserEmail);
         this.options.githubUserEmail = answers.githubUserEmail;
 
-
-        this.log('scratchOrgName: ', answers.scratchOrgName);
-        this.options.scratchOrgName = answers.scratchOrgName;
 
 
         this.log('apexCtrlName: ', answers.apexCtrlName);
@@ -312,7 +334,7 @@ module.exports = class extends Generator {
     this.log(( chalk.green("Pushing code to the scratch org...") ) );
 
     shell.cd(this.destinationRoot() + "/" + this.options.prjName);
-    shell.exec('sfdx force:config:set defaultusername=MyOrg3');
+    shell.exec('sfdx force:config:set defaultusername=' + this.options.scratchOrgAlias);
 
     if (shell.exec('sfdx force:source:push').code !== 0) {
       shell.echo('Error: sfdx force:source:push failed');
