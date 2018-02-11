@@ -3,8 +3,15 @@
 1. create scratch org
 
 ```
+# set alias and default DevHub
+$ sfdx force:auth:web:login --setdefaultdevhubusername --setalias DevHub
+
+# check org list
+$ sfdx force:org:list
+
+
  $ cd MyProject
- $ sfdx force:org:create  -a MyOrg2 -s -f config/scratch-org-def.json
+ $ sfdx force:org:create  -a MyOrg1 -s -f MyProject/config/scratch-org-def.json
  Successfully created scratch org: 00D630000000l3xEAA, username: test-xm7rnw0hygj9@myscratchorg_1.net
 
  $ sfdx force:org:list

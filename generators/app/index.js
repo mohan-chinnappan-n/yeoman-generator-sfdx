@@ -331,7 +331,7 @@ module.exports = class extends Generator {
 
   end() {
 
-    this.log(( chalk.green("Pushing code to the scratch org...") ) );
+   this.log(( chalk.green("Pushing code to the scratch org...") ) );
 
     shell.cd(this.destinationRoot() + "/" + this.options.prjName);
     shell.exec('sfdx force:config:set defaultusername=' + this.options.scratchOrgAlias);
@@ -346,6 +346,7 @@ module.exports = class extends Generator {
         shell.exit(1);
       }
     }
+
 
     this.log(yosay( chalk.green("Your project is ready! run: code . to launch VS Code") ) );
 
